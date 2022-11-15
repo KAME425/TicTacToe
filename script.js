@@ -27,15 +27,15 @@ function play(id) {
 
     if (playboard.innerHTML === "") {
         playboard.innerHTML = current_player;
+
         switchPlayer();
         moves++;
     } else {
-        return
+        return;
     }
-    setTimeout(()=> {
-        if (moves >= 9) {
+    if (moves >= 9) {
+        setTimeout(() => {
             alert("GAME END");
-        }
-    }, 500);
-
+        }, 250);
+    }
 }
